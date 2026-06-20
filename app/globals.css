@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #060a14;
+  color: #eaf3ff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #378add;
+  color: #060a14;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #060a14; }
+::-webkit-scrollbar-thumb { background: rgba(56, 138, 221, 0.3); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(56, 138, 221, 0.5); }
+
+/* Grid background with radial mask */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(56, 138, 221, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 138, 221, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Dashboard 40x40 cobalt grid (subtle) */
+.dash-grid {
+  background-image:
+    linear-gradient(rgba(56, 138, 221, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 138, 221, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Soft radial glow used behind the dashboard header only */
+.dash-header-glow {
+  background: radial-gradient(circle at 20% 0%, rgba(56, 138, 221, 0.18), transparent 65%);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
