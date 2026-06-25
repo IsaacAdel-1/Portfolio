@@ -4,9 +4,8 @@ import { useState } from 'react';
 import Logo from './Logo';
 
 const links = [
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Work', href: '#work' },
 ];
 
 export default function Nav() {

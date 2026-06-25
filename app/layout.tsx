@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
+import Analytics from '@/components/Analytics';
 import './globals.css';
 
 const inter = Inter({
@@ -40,7 +41,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${grotesk.variable}`}>
-      <body className="font-sans leading-relaxed">{children}</body>
+      <body className="font-sans leading-relaxed">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

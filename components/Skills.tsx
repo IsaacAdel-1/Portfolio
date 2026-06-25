@@ -77,10 +77,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="px-[clamp(32px,7vw,130px)] py-20 border-t border-cobalt/10 relative"
+      className="px-[clamp(32px,7vw,130px)] py-10 border-t border-cobalt/10 relative"
     >
       <p className="reveal text-faint text-xs tracking-[2.5px] uppercase mb-2.5 font-medium">
-        02 — Skills
+        Skills
       </p>
       <h2 className="reveal font-display text-[clamp(26px,4vw,34px)] font-semibold text-ink tracking-[-1px] mb-6">
         Stack &amp; tools.
